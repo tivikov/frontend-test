@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+  <header>
+    <div class="top-line-mnu">
+    <div class="container">
+        <div class="humb" id="icon-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="menu-list-mobile" id="mob-menu">
+          <li>
+            <a href="#personal">Личная информация</a>
+          </li>
+          <li>
+            <a href="#experience">Опыт</a>
+          </li>
+          <li>
+            <a href="#js">JavaScript</a>
+          </li>
+          <li>
+            <a href="#about">О себе</a>
+          </li>
+        </ul>
+        <ul class="menu-list">
+           <li>
+          <a href="#personal">Личная информация</a>
+          </li>
+          <li>
+            <a href="#experience">Опыт</a>
+          </li>
+          <li>
+            <a href="#js">JavaScript</a>
+          </li>
+          <li>
+            <a href="#about">О себе</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="bg">
+      <div class="title-wrap">
+        <h1>Анкета</h1>
+      </div>
+    </div>
+  </header>
+  <section id="personal" class="s-box">
+    <div class="icon" style="background-image: url(img/personal.png);"></div>
+    <h3>Личная информация</h3>
+    <div class="container">
+      <div class="form-group">
+        <div class="input-group">
+          <input type="text" placeholder="ФИО">
+        </div>
+        <div class="input-group">
+            <select name="year" id="year" placeholder="Год рождения" onchange="changeClass()">
+              <option value="" disabled selected>Год рождения</option>
+            </select>
+        </div>
+        <div class="input-group">
+          <input type="text" placeholder="Место проживания">
+        </div>
+        <div class="input-group">
+          <input type="text" placeholder="Skype">
+        </div>
+        <div class="input-group">
+          <input type="text" placeholder="Email">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="experience" class="s-box">
+    <div class="icon" style="background-image: url(img/expeirence.png)"></div>
+    <h3>Расскажите о своем опыте</h3>
+    <div class="container">
+      <div class="checkbox-group">
+        <div class="col-3">
+          <label>БЭМ/OOCSS
+            <input type="checkbox" name="exp">
+            <span class="mark"></span>
+          </label>
+          <label>Stylus/LESS/SASS
+            <input type="checkbox" name="exp">
+            <span class="mark"></span>
+          </label>
+          <label>Работаю с SVG
+            <input type="checkbox" name="exp">
+            <span class="mark"></span>
+          </label>
+        </div>
+        <div class="col-3">
+          <label>Верстаю семантично
+            <input type="checkbox" name="exp">
+            <span class="mark"></span>
+          </label>
+          <label>ES2015/ES2016
+            <input type="checkbox" name="exp">
+            <span class="mark"></span>
+          </label>
+          <label>Gulp/GRUNT
+            <input type="checkbox" name="exp">
+            <span class="mark"></span>
+          </label>
+        </div>
+        <div class="col-3">
+          <label>Webpack
+            <input type="checkbox" name="exp">
+            <span class="mark"></span>
+          </label>
+          <label>jQuery
+            <input type="checkbox" name="exp">
+            <span class="mark"></span>
+          </label>
+          <label>Ипользую Git
+            <input type="checkbox" name="exp">
+            <span class="mark"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="s-box" id="js">
+    <div class="icon" style="background-image: url(img/js.png);"></div>
+    <h3>Уровень владения JavaScript</h3>
+    <div class="container">
+      <div class="slider" id = "slider">
+        <div class="levels">
+          <div class="level">
+            <span>Не владею</span>
+          </div>
+          <div class="level">
+            <span>Использую готовые решения</span>
+          </div>
+          <div class="level">
+            <span>Использую готовые решения и умею переделывать</span>
+          </div>
+          <div class="level">
+            <span>Пишу сложный JS с нуля</span>
+          </div>
+        </div>
+        <div class="range" id="range">
+          <div class="color-line" id="indicator"></div>
+        </div>
+        <div class="drop-wrap">
+          <div id="drop" style="background-image: url(img/drop.png)">
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="about" class="s-box">
+    <div class="icon" style="background-image: url(img/about.png);"></div>
+    <h3>Расскажите о себе</h3>
+    <div class="container">
+      <div class="info-text">
+        <span>Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.</span>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <textarea placeholder="Понравилась тем, что..."></textarea>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="button">Готово</button>
+  </section>
+
+
+  <script src="js/main.min.js"></script>
+</body>
+</html>

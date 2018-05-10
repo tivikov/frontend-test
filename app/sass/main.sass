@@ -1,0 +1,304 @@
+@import "fonts"
+@import "vars"
+
+// custom styles
+* 
+  box-sizing: border-box
+
+::placeholder
+  color: $placeholder
+  font-family: Roboto, sans-serif
+
+input[type=text],textarea, select
+  border-radius: 4px
+  outline: $accent
+  border: 1px solid $border
+  font-size: 24px
+  padding: 20px 0
+
+textarea
+  resize: none
+  padding:
+    left: 20px
+    right: 20px
+  height: 180px
+  margin-bottom: 70px
+  font-size: 20px
+
+select
+  appearance: none
+  background-image: url("../img/arrow-down.png")
+  background-repeat: no-repeat
+  background-position: calc(100% - 20px) 50%
+  background-size: 10px
+  text-align: center
+  background-color: #fff
+  text-align-last: center
+  color: $placeholder
+  option
+    text-align: left
+    color: $text
+    font-size: 16px
+
+.input-group
+  >*
+    display: block
+    width: 100%
+
+body
+  font-size: $fz
+  color: $text
+  margin: 0
+  line-height: 1.4
+  font-family: $font
+  padding: 0
+
+header
+  
+  .top-line-mnu
+    display: flex
+    position: relative
+    background-color: #ffffff
+    justify-content: center
+    align-items: center
+    height: 80px
+    text-align: center
+    border-bottom: 1px solid $border
+    .humb
+      position: relative
+      display: none
+      span
+        display: block
+        transition: all 0.25s ease
+        transform-origin: center center
+        width: 30px
+        height: 5px
+        background-color: $accent
+        border-radius: 3px
+        &:not(:last-child)
+          margin-bottom: 5px
+      &.open
+        span
+          &:first-child
+            transform: translateY(10px) rotate(45deg) 
+          &:last-child
+            transform: translateY(-10px) rotate(-45deg)
+          &:nth-child(2)
+            opacity: 0
+    #mob-menu
+      display: none
+      position: absolute
+      top: 80px
+      width: 100%
+      background-color: #ffffff
+      left: 0
+      margin: 0
+      padding: 0
+      li
+        width: 100%
+        a
+          display: block
+          text-decoration: none
+          color: $accent
+          padding: 10px 0
+          &:hover,&:active
+            color: $text
+        &.active
+          a
+            color: $text
+
+    .menu-list
+      margin: 0
+      padding: 0
+      li
+        margin: 0px 35px
+        display: inline-block
+        a
+          font-size: 14px
+          color: $accent
+          outline: none
+          text-decoration: none
+          transition: color 0.25s ease
+        &.active, a:hover, a:active
+          color: $text
+  .bg
+    background-image: url('../img/bg.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center top
+  .title-wrap
+    text-align: center
+    padding: 130px 0 70px 0
+    background-image: linear-gradient(180deg, rgba(#fff,0) 0%,rgba(255,255,255,0.9) 60%,rgba(255,255,255,1) 100%)
+    h1
+      font-size: 70px
+      color: #000000
+      margin: 0
+      padding: 0
+      line-height: 1
+      font-weight: 150
+      font-family: RobotoThin, sans-serif
+
+.s-box
+  text-align: center
+  margin-bottom: 72px
+  h3
+    font-size: 30px
+    margin: 0
+    padding: 0
+    font-weight: 300
+  .info-text
+    margin-top: 20px
+  .form-group
+    margin-top: 50px
+    padding: 0 6%
+    .input-group
+      margin-bottom: 25px
+    
+    input
+      text-align: center
+  select
+    width: 320px
+    max-width: 100%
+    display: block
+    margin: 0 auto
+    &.change
+      color: $text
+  .checkbox-group
+    margin-top: 50px
+    text-align: left
+    display: flex
+    flex-wrap: wrap
+    color: #000000
+    justify-content: space-between
+    align-content: center
+    .col-3
+      width: 210px
+      .mark:after
+        content: ""
+        position: absolute
+        display: none
+      label
+        display: block
+        position: relative
+        cursor: pointer
+        padding-left: 33px
+        font-size: 16px
+        user-select: none
+        margin-bottom: 15px
+        &:hover input ~ .mark
+          background-color: #eee
+        input
+          position: absolute
+          opacity: 0
+          cursor: pointer
+          &:checked ~ .mark
+            background-color: $accent
+            &:after
+              display: block
+        .mark
+          transition: background-color 0.25s ease
+          position: absolute
+          top: 0
+          left: 0
+
+          height: 20px
+          width: 20px
+          border-radius: 2px
+          background-color: #ffffff
+          border: 1px solid $accent
+          &:after
+            left: 5px
+            top: 1px
+            width: 5px
+            height: 10px
+            border: solid white
+            border-width: 0 3px 3px 0
+            transform: rotate(45deg)
+
+
+.slider
+  padding: 0 15px
+  margin-top: 50px
+  .levels
+    display: flex
+    justify-content: flex-start
+    align-items: flex-end
+    padding-bottom: 15px
+    overflow: hidden
+    .level
+      text-align: left
+      position: relative
+      width: 25%
+      cursor: pointer
+      span
+        font-size: 13px
+      &:last-child
+        text-align: right
+        margin-right: auto
+      &:after
+        content: ""
+        top: 105%
+        display: block
+        position: absolute
+        height: 30px
+        width: 1px
+        border-right: 1px dotted #b7b7b7
+      &:last-child
+        &:after
+          left: calc(100% - 2px)
+  .range
+    clip-path: polygon(0 80%, 100% 0%, 100% 100%, 0% 100%)
+    width: 100%
+    height: 15px
+    background-color: #e8e8e8
+    .color-line
+      background-image: linear-gradient(90deg,$purple, darken($purple,30%))
+      width: 50%
+      height: 100%
+  #drop
+    width: 20px
+    height: 20px
+    position: relative
+    left: 50%
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+    margin-left: -10px
+
+
+.icon
+  margin-bottom: 30px
+  background-size: contain
+  width: 45px
+  height: 45px
+  display: inline-block
+
+.container
+  width: 768px
+  margin: 0 auto
+  max-width: 100%
+  padding: 0px 15px
+
+.button
+  outline: none
+  cursor: pointer
+  background-color: $accent
+  color: #ffffff
+  height: 50px
+  font-family: $font
+  border: none
+  font-size: 16px
+  border-radius: 10px
+  display: inline-block
+  padding: 0 35px
+  text-decoration: none
+  transition: background-color 0.25s ease
+  &:hover
+    background-color: lighten($accent,5%)
+  &:active
+    background-color: darken($accent, 5%)
+
+
+
+@import "media"
