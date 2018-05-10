@@ -18,6 +18,7 @@ input[type=text],textarea, select
 
 textarea
   resize: none
+  -ms-overflow-style: none
   padding:
     left: 20px
     right: 20px
@@ -35,6 +36,10 @@ select
   background-color: #fff
   text-align-last: center
   color: $placeholder
+  ::placeholder
+    text-align: center
+  &::-ms-expand
+    display: none
   option
     text-align: left
     color: $text
@@ -61,9 +66,12 @@ header
     background-color: #ffffff
     justify-content: center
     align-items: center
+    margin: auto
     height: 80px
     text-align: center
     border-bottom: 1px solid $border
+    .container 
+      margin: 0
     .humb
       position: relative
       display: none

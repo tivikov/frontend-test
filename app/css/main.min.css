@@ -53,6 +53,7 @@ input[type=text], textarea, select {
 
 textarea {
   resize: none;
+  -ms-overflow-style: none;
   padding-left: 20px;
   padding-right: 20px;
   height: 180px;
@@ -74,6 +75,18 @@ select {
   -moz-text-align-last: center;
        text-align-last: center;
   color: #c8c8c8; }
+  select ::-webkit-input-placeholder {
+    text-align: center; }
+  select ::-moz-placeholder {
+    text-align: center; }
+  select :-ms-input-placeholder {
+    text-align: center; }
+  select ::-ms-input-placeholder {
+    text-align: center; }
+  select ::placeholder {
+    text-align: center; }
+  select::-ms-expand {
+    display: none; }
   select option {
     text-align: left;
     color: #1c1c1c;
@@ -106,9 +119,12 @@ header .top-line-mnu {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: auto;
   height: 80px;
   text-align: center;
   border-bottom: 1px solid #d9d9d9; }
+  header .top-line-mnu .container {
+    margin: 0; }
   header .top-line-mnu .humb {
     position: relative;
     display: none; }
