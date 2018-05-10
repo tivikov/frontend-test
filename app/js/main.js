@@ -5,8 +5,14 @@ for (var i = startyear;i<=currenttyear;i++){
   var newOpt = document.createElement('option');
   newOpt.value = i;
   newOpt.innerHTML = i;
+  if(newOpt.value == "1999") {
+    newOpt.selected = true;
+    years.classList.add('change');
+  }
   years.appendChild(newOpt);
 }
+
+
 var humb = document.getElementById('icon-menu');
 var mobMenu = document.getElementById('mob-menu');
 humb.addEventListener('click',openMenu);
